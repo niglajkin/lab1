@@ -1,9 +1,9 @@
 package main
 
 import (
-  	"encoding/json"
-  	"net/http"
-  	"time"
+	"encoding/json"
+	"net/http"
+	"time"
 )
 
 type TimeResponse struct {
@@ -16,5 +16,6 @@ func timeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	println("Hello world!!!")
+	http.HandleFunc("/time", timeHandler)
 }
+
