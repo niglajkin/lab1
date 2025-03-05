@@ -15,14 +15,8 @@ func timeHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(TimeResponse{Time: time.Now().Format(time.RFC3339)})
 }
 
-func unnecessaryFunction() {
-	println("Doing unnecessary things...")
-}
-
 func main() {
 	http.HandleFunc("/time", timeHandler)
-  http.ListenAndServe(":8795", nil)
-
-	unnecessaryFunction()
+    http.ListenAndServe(":8795", nil)
 }
 
