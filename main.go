@@ -17,4 +17,5 @@ func timeHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	println("Hello world!")
+	Serve(":8795", nil)
 }
